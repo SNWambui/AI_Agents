@@ -1,9 +1,15 @@
 import streamlit as st
 from langchain.llms import OpenAI
+from key_config import get_openai_key
 
 st.title('🦜🔗 Key Testing')
 
-openai_api_key = st.sidebar.text_input('OpenAI API Key')
+#openai_api_key = st.sidebar.text_input('OpenAI API Key')
+try:
+    openai_api_key = get_openai_key()
+except ValueError as e:
+    st.error(str(e))
+    openai_api_key = ""
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)

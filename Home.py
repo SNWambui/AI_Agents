@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import home, card_page, form_page
+from pages import AI_Agents, About, Perform_Task
 
 # PAGES = {
 #     "Home": home,
@@ -12,5 +12,6 @@ from pages import home, card_page, form_page
 # page = PAGES[selection]
 # page.app()
 st.title("Home")
-st.write("Welcome to our application!")
-st.write("Here's how our app works: ...")
+st.header("Welcome to our application!")
+st.write("Here's how our app works: Navigate to the AI Agents page to ask\
+         an agent to complete a specific task ")

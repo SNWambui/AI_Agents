@@ -9,6 +9,10 @@ agent_goal = st.session_state.get('agent_goal', 'Default Agent Goal')
 st.write(f"{card_title}")
 st.write(f"{agent_goal}")
 
+## READ THIS
+# https://github.com/streamlit/llm-examples/blob/main/pages/3_Langchain_Quickstart.py
+    
+
 # Form for user input
 with st.form(key='form'):
     default_input = st.text_input("AI Agent", f"{card_title}")
@@ -27,4 +31,4 @@ with st.form(key='form'):
 # def agent_model(agent, user_input):
 #     model = LLL(get_api_key)
 #     st.info(model(user_input))
-    
+

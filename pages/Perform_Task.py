@@ -14,6 +14,8 @@ st.write(f"{agent_goal}")
     
 
 # Form for user input
+# need to add valiedation that the AI agent is something we can implement
+# that is if the user edits the default input, it should validate the input
 with st.form(key='form'):
     default_input = st.text_input("AI Agent", f"{card_title}")
     user_input = st.text_input(label='Your Objective')
